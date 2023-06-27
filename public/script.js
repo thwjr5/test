@@ -78,11 +78,11 @@ function toggleTheaterMode(video) {
     video.classList.add('theater-mode');
     overlay.style.display = 'block';
     video.muted = false;
-    video.controls = false;
-    video.play();
+    video.controls = true;
     isInTheaterMode = true;
     video.removeEventListener('mouseover', playVideo);
     video.removeEventListener('mouseout', pauseVideo);
+    setTimeout(() => video.play(), 5); 
   }
 }
 

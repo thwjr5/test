@@ -5,6 +5,7 @@ const port = 3000;
 
 app.use(express.json());
 app.use(express.static('public'));
+
 app.get('/videos/:videoName', function(req, res) {
     const path = 'videos/' + req.params.videoName
     const stat = fs.statSync(path)
@@ -49,6 +50,6 @@ app.get('/videos', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
