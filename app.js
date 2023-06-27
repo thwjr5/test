@@ -43,7 +43,8 @@ app.get('/videos', (req, res) => {
       console.error(err);
       res.status(500).send('Server error');
     } else {
-      res.json(files);
+      const videoFiles = files.map(file => ({ url: `/videos/${file}` }));
+      res.json(videoFiles);
     }
   });
 });
