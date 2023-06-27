@@ -28,37 +28,10 @@
     }
   }
   
-  #search-bar {
-    padding: 5px;
-    border: 1px solid var(--text-color);
-    border-radius: 5px;
-    outline: none;
-    width: 100%;
-  }
-  
   @media (min-width: 768px) {
     #search-bar {
       width: auto;
     }
-  }
-  
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .category {
-    padding: 5px 10px;
-    background-color: #1a1a1a;
-    border-radius: 5px;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .category.active {
-    background-color: #333333;
   }
   
   .video-grid {
